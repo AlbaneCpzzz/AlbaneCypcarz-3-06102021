@@ -1,0 +1,20 @@
+{
+  "name": "AlbaneCypcarz-3-06102021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlbaneCpzzz/AlbaneCypcarz-3-06102021.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlbaneCpzzz/AlbaneCypcarz-3-06102021/issues"
+  },
+  "homepage": "https://github.com/AlbaneCpzzz/AlbaneCypcarz-3-06102021#readme"
+}
