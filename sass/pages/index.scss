@@ -1,16 +1,9 @@
 
-
-/*En-tête*/
-
-.en-tete{
+.localisation{
     display: flex;
+    align-content: center;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
 }
 
-.en-tete h1{
-    font-family: Shrikhand,"cursive" !important;
-    text-align: center;
-}
+
