@@ -1,0 +1,24 @@
+.pied-page{
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(70, 70, 70, 0.925);
+    color: white;
+    padding: 10px;
+    font-size: small;
+    line-height: 17px;
+}
+
+.pied-page h1{
+    margin-bottom: 10px;
+}
+
+.p-icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.p-icon i{
+    width: 5%;
+}
