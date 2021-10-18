@@ -4,6 +4,199 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+    line-height: 25px;
+    background-color: lightgray;
+    margin-top: 3px;
 }
 
+.localisation i{
+    margin:10px
+}
+
+.localisation p{
+    margin:10px
+}
+
+.exploration{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    line-height: 30px;
+    background-color: transparentize($color: lightgrey, $amount: 0.8);
+}
+
+.exploration h2{
+    font-size: large;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.exploration p{
+    margin: 10px;
+}
+
+.exploration-button{
+    font-family: "Roboto";
+    line-height: 40px;
+    padding: 0px 10px;
+    border-radius: 50px;
+    color: white;
+    background: linear-gradient(0deg, $color-primaire 0%, $color-secondaire 100%);
+    cursor: pointer;
+    box-shadow: 5px 5px 10px lightgrey;
+    margin: 10px; 
+}
+
+.exploration-button:hover{
+    transition-duration: 0.25s;
+    box-shadow: 5px 5px 10px grey;
+}
+
+.fonctionnement{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.fonctionnement h2{
+    font-size: large;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.fonctionnement-block{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    counter-reset: compteListe;
+}
+
+.fonctionnement-type{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 50px;
+    margin: 10px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 10px lightgrey;
+    border-radius: 20px;
+}
+
+.fonctionnement-type::before{
+    counter-increment: compteListe 1;
+    content: counter(compteListe) " ";
+    background: #9356DC;
+    height: 20px;
+    width: 20px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    left: 20px;
+    font-family: "Roboto";
+}
+
+
+.fonctionnement-type:hover{
+    background-color: transparentize($color-primaire, $amount: 0.8);
+    cursor: pointer;
+}
+
+.fonctionnement-type i{
+    width: 15%;
+    min-width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+}
+
+.fonctionnement-type:hover i{
+    color: $color-primaire;
+    opacity: 100%;
+}
+
+.fonctionnement-type p{
+    font-weight: bold;
+    width: 85%;
+}
+
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: transparentize($color: lightgrey, $amount: 0.8);
+}
+
+.restaurants h2{
+    font-size: large;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.restaurants-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.restaurants-type{
+    width: 50%;
+    padding: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column
+}
+
+.restaurants-type:hover{
+    cursor: pointer;
+}
+
+.restaurants-type img{
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.restaurants-type-description{
+    display: flex;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 5px 5px 10px lightgrey;
+    height: 40px;
+}
+
+.restaurants-type-text{
+    font-size: x-small;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width:85%
+}
+
+.restaurants-type h3{
+    font-weight: bold;
+}
+
+.restaurants-type p{
+    font-weight: lighter;
+}
+
+.restaurants-type-heart{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.restaurants-type-heart .fas{
+    display: hidden;
+}
 
