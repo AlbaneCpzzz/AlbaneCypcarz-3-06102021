@@ -1,15 +1,17 @@
 .pied-page{
     display: flex;
     flex-direction: column;
-    background-color:rgba(70, 70, 70, 0.925);
+    background-color: rgba(70, 70, 70, 0.925);
     color: white;
     padding: 10px;
-    font-size: small;
-    line-height: 17px;
+    line-height: 30px;
+    height: 200px;
+    justify-content: center;
 }
 
 .pied-page h1{
     margin-bottom: 10px;
+    font-size: larger;
 }
 
 .p-icon{
@@ -20,5 +22,9 @@
 }
 
 .p-icon i{
-    width: 5%;
+    width: 30px;
+}
+
+.pied-page p:hover{
+    cursor: pointer;
 }
