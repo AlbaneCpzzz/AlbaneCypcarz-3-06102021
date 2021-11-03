@@ -1,0 +1,67 @@
+@keyframes type-aff {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.restaurant-type{
+    display: flex;
+    height: 60px;
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px lightgrey;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+    cursor: pointer;
+    animation: type-aff duration timing-function delay iteration-count direction fill-mode;
+
+    &:hover .restaurant-check {
+        width: 60px;
+    }
+
+    &:hover > .restaurant-check i {
+        opacity: 1;
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+
+    &:hover .restaurant-check{
+        right:0px;
+    }    
+}
+
+.restaurants-type-heart{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .far{
+        font-size: x-large;
+    }
+
+    & .fas{
+        font-size: x-large;
+        display: none;
+    }
+
+    &:hover .fas{
+        font-size: x-large;
+        display:block;
+        background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: heart-aff 3s forwards;
+    }
+
+    &:hover .far{
+        display: none;
+    }
+}
