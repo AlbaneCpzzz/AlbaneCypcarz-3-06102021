@@ -99,6 +99,7 @@
         font-weight: lighter;
         margin-bottom: 10px;
         text-transform: uppercase;
+        text-decoration: underline $color-tertiaire 4px;
     }
 }
 
@@ -113,6 +114,11 @@
     align-items: center;
     justify-content: space-between;
     overflow-x: hidden;
+    cursor: pointer;
+
+    animation: itemAppear .6s;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
 
     &:hover .restaurant-check {
         width: 60px;
@@ -137,6 +143,8 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    padding-left: 20px;
+    font-size: 90%;
 }
 
 .restaurant-prix{
@@ -185,3 +193,77 @@
     }
 }
 
+/* MEDIA Responsive - MOBILE */
+
+@media only screen and (max-width: 600px) {
+    .note img{
+        height: 250px;
+    }
+    
+    .palette img{
+        height: 250px;
+    }
+    
+    .delice img{
+        height: 250px;
+    }
+    
+    .francaise img{
+        height: 250px;
+    }
+    
+    .restaurant-menu{
+        flex-direction: column;
+    }
+    
+    .restaurant-sous-menu{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .restaurant-text{
+        padding-left: 20px;
+    }
+    
+    .restaurant-button{
+        margin-top: 0px;
+    }
+}
+
+
+/* MEDIA Responsive - TABLETTE */
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .note img{
+        height: 350px;
+    }
+    
+    .palette img{
+        height: 350px;
+    }
+    
+    .delice img{
+        height: 350px;
+    }
+    
+    .francaise img{
+        height: 350px;
+    }
+    
+    .restaurant-menu{
+        flex-direction: column;
+    }
+    
+    .restaurant-sous-menu{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .restaurant-text{
+        padding-left: 20px;
+    }
+    
+    .restaurant-button{
+        margin-top: 0px;
+    }
+}
