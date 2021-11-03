@@ -47,43 +47,6 @@
     }
 }
 
-.restaurant-type-heart{
-    width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    & .far{
-        font-size: x-large;
-        transition: 5s;
-    }
-
-    & .fas{
-        font-size: x-large;
-        display: none;
-    }
-
-    &:hover .fas{
-        font-size: x-large;
-        display:block;
-        background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    &:hover .fas{
-        font-size: x-large;
-        display:block;
-        background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    &:hover .far{
-        display: none;
-    }
-}
-
 .restaurant-menu{
     display: flex;
     flex-direction: row;
@@ -103,38 +66,6 @@
     }
 }
 
-.restaurant-type{
-    display: flex;
-    height: 60px;
-    background-color: white;
-    margin-top: 15px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px lightgrey;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    overflow-x: hidden;
-    cursor: pointer;
-
-    animation: itemAppear .6s;
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
-    animation-fill-mode: both;
-
-    &:hover .restaurant-check {
-        width: 60px;
-    }
-
-    &:hover > .restaurant-check i {
-        opacity: 1;
-        transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-    }
-
-    &:hover .restaurant-check{
-        right:0px;
-    }
-}
-
 .restaurant-text{
     display: flex;
     flex-direction: column;
@@ -145,14 +76,26 @@
     overflow: hidden;
     padding-left: 20px;
     font-size: 90%;
+
+    & h4{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    & p{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
 }
 
 .restaurant-prix{
-    width: 20px;
+    width: 60px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
 }
 
@@ -187,8 +130,9 @@
     margin-top: 30px;
     align-self: center;
     
+    
     &:hover{
-        transition-duration: 0.25s;
+        transition-duration: .25s;
         box-shadow: 5px 5px 10px grey;
     }
 }
@@ -265,5 +209,33 @@
     
     .restaurant-button{
         margin-top: 0px;
+    }
+}
+
+
+@keyframes type-opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes type-duration {
+    0%{
+        animation-duration: 0;
+    }
+    100%{
+        animation-duration: 1;
+    }
+}
+
+@keyframes type-delay {
+    0%{
+        animation-delay: 0;
+    }
+    100%{
+        animation-delay: 1;
     }
 }
