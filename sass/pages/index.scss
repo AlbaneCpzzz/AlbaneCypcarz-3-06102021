@@ -1,37 +1,3 @@
-/*.loading-spinner-div{
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background-color: hsla(0,0%,100%,.9);
-    visibility: visible;
-    transition: hidden;
-    animation-duration: 3s;
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.loading-spinner{
-    animation: spin 5s infinite linear;
-    border: solid 60px transparent;
-    border-radius: 50%;
-    border-color: #9356DC #FF79DA #99E2D0 lightgrey;
-    box-sizing: border-box;
-    height: 185px;
-    width: 185px;
-    left: calc(50% - 80px);
-    position: fixed;
-    top: calc(50% - 80px);
-    z-index: 1;
-  }
-  
-  @keyframes xxx {
-    100% {
-      transform:rotate(360deg);
-    }
-}*/
-
 .localisation{
     display: flex;
     align-content: center;
@@ -47,6 +13,13 @@
 
     & p{
         margin:10px
+    }
+
+    input{
+        border: none;
+        background: transparent;
+        text-align: center;
+        font-weight: bold;
     }
 }
 
@@ -237,47 +210,9 @@
     font-size: small;
 }
 
-.restaurants-type-heart{
-    width: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    & .far{
-        font-size: x-large;
-        transition: 5s;
-    }
-
-    & .fas{
-        font-size: x-large;
-        display: none;
-    }
-
-    &:hover .fas{
-        font-size: x-large;
-        display:block;
-        background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    &:hover .far{
-        display: none;
-    }
-}
-
 /* MEDIA Responsive - Mobile */
 
 @media only screen and (max-width: 600px) {
-
-    /*.loading-spinner-div{
-    }
-
-    .loading-spinner{
-    }
-  
-    @keyframes spin {
-    }*/
 
     .localisation{
         background-color:rgb(204, 204, 204);
@@ -343,14 +278,6 @@
 /* MEDIA Responsive - TABLETTE */
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    /*.loading-spinner-div{
-    }
-
-    .loading-spinner{
-    }
-  
-    @keyframes spin {
-    }*/
 
     .localisation{
         background-color:rgb(204, 204, 204);
