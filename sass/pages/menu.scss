@@ -41,11 +41,10 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-}
 
-
-.restaurant-titre h2{
-    font-family: 'Shrikhand';
+    & h2 {
+        font-family: 'Shrikhand';
+    }
 }
 
 .restaurant-type-heart{
@@ -53,28 +52,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.restaurant-type-heart .far{
-    font-size: x-large;
-    transition: 5s;
-}
+    & .far{
+        font-size: x-large;
+        transition: 5s;
+    }
 
-.restaurant-type-heart .fas{
-    font-size: x-large;
-    display: none;
-}
+    & .fas{
+        font-size: x-large;
+        display: none;
+    }
 
-.restaurant-type-heart:hover .fas{
-    font-size: x-large;
-    display:block;
-    background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+    &:hover .fas{
+        font-size: x-large;
+        display:block;
+        background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
-.restaurant-type-heart:hover .far{
-    display: none;
+    &:hover .fas{
+        font-size: x-large;
+        display:block;
+        background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &:hover .far{
+        display: none;
+    }
 }
 
 .restaurant-menu{
@@ -87,14 +94,13 @@
 
 .restaurant-sous-menu{
     width: 32%;
-}
 
-.restaurant-sous-menu h3{
-    font-weight: lighter;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+    & h3{
+        font-weight: lighter;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
 }
-
 
 .restaurant-type{
     display: flex;
@@ -111,10 +117,15 @@
     &:hover .restaurant-check {
         width: 60px;
     }
+
     &:hover > .restaurant-check i {
         opacity: 1;
         transform: rotate(360deg);
         -webkit-transform: rotate(360deg);
+    }
+
+    &:hover .restaurant-check{
+        right:0px;
     }
 }
 
@@ -148,28 +159,11 @@
     background-color: $color-tertiaire;
     border-radius: 0px 10px 10px 0px;
     transition: width 0.5s ease-in-out;
-    i{
+    
+    & i{
         opacity: 0.8;
         transition: all 0.5s ease-in-out;
     }
-    // width: 60px;
-    // height: 100%;
-    // background-color: $color-tertiaire;
-    // border-radius: 0px 10px 10px 0px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // position: relative;
-    // right: -60px;
-    // z-index: 1;
-    // margin: 0px;
-    // color: white;
-    // transition: all 0.3s;
-    // text-decoration: none;
-}
-
-.restaurant-type:hover .restaurant-check{
-    right:0px;
 }
 
 .restaurant-button{
@@ -184,9 +178,10 @@
     box-shadow: 5px 5px 10px lightgrey;
     margin-top: 30px;
     align-self: center;
+    
+    &:hover{
+        transition-duration: 0.25s;
+        box-shadow: 5px 5px 10px grey;
+    }
 }
 
-.restaurant-button:hover{
-    transition-duration: 0.25s;
-    box-shadow: 5px 5px 10px grey;
-}
