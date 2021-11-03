@@ -1,0 +1,77 @@
+@keyframes heart-aff {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.restaurants-type-heart{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .far{
+        font-size: x-large;
+    }
+
+    & .fas{
+        font-size: x-large;
+        display: none;
+    }
+
+    &:hover .fas{
+        font-size: x-large;
+        display:block;
+        background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: heart-aff 3s forwards;
+    }
+
+    &:hover .far{
+        display: none;
+    }
+}
+
+@keyframes heart-aff {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.restaurant-type-heart{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .far{
+        font-size: x-large;
+    }
+
+    & .fas{
+        font-size: x-large;
+        display: none;
+    }
+
+    &:hover .fas{
+        font-size: x-large;
+        display:block;
+        background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: heart-aff 3s forwards;
+    }
+
+    &:hover .far{
+        display: none;
+    }
+}
