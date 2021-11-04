@@ -1,69 +1,221 @@
-/* MEDIA Responsive - Mobile */
+.localisation{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+    background-color:rgb(204, 204, 204);
+    margin-top: 3px;
 
-@media only screen and (max-width: 600px) {
-
-    .localisation{
-        background-color:rgb(204, 204, 204);
+    & i{
+        margin:10px
     }
 
-    .exploration{
-        line-height: 35px;
-        
-        & h2{
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        & p{
-            text-align: center;
-        }
-
-        & .exploration-button{
-            margin-bottom: 30px;
-        }
+    & p{
+        margin:10px
     }
 
-    .fonctionnement{
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-
-    .fonctionnement-block{
-        flex-direction: column;
-    }
-
-    .fonctionnement-type{
-        width: 90%;
-        line-height: 50px;
-    }
-
-    .restaurants{
-        height: auto;
-        margin-bottom: 0px;
-    }
-
-    .restaurants-block{
-        flex-direction: column;
-        height: auto;
-        margin-bottom: 40px;
-    }
-
-    .restaurants-type{
-        width: 90%;
-        height: auto;
-    }
-
-    .restaurants-type-haut{
-        height: auto;
-        width: 100%;
-        
-        & img{
-            height: 150px;
-        }
+    input{
+        border: none;
+        background: transparent;
+        text-align: center;
+        font-weight: bold;
     }
 }
 
-/* MEDIA Responsive - TABLETTE */
+.exploration{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    line-height: 35px;
+    background-color:rgb(240, 240, 240);
+
+    & h2{
+        font-weight: bold;
+        margin: 10px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    & p{
+        margin: 10px;
+        text-align: center;
+    }
+}
+
+.exploration-button{
+    font-family: "Roboto";
+    line-height: 50px;
+    padding: 0px 10px;
+    border-radius: 50px;
+    color: white;
+    background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+    cursor: pointer;
+    box-shadow: 5px 5px 10px lightgrey;
+    margin: 15px;
+    margin-bottom: 30px;
+
+    &:hover{
+        transition-duration: 0.25s;
+        box-shadow: 5px 5px 10px grey;
+    }
+}
+
+.fonctionnement{
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    & h2{
+        font-weight: bold;
+        margin: 10px;
+    }
+}
+
+.fonctionnement-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    counter-reset: compteListe;
+}
+
+.fonctionnement-type{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    line-height: 50px;
+    margin: 10px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 10px lightgrey;
+    border-radius: 20px;
+
+    &::before{
+        counter-increment: compteListe 1;
+        content: counter(compteListe) " ";
+        background: #9356DC;
+        height: 20px;
+        width: 20px;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: absolute;
+        font-family: "Roboto";
+        margin: -10px;
+    }
+
+    &:hover{
+        background-color:rgb(240, 240, 240);
+        cursor: pointer;
+    }
+
+    & i{
+        width: 15%;
+        min-width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: grey;
+    }
+
+    &:hover i{
+        color: $color-primaire;
+        opacity: 100%;
+    }
+
+    & p{
+        font-weight: bold;
+        width: 85%;
+    }
+}
+
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    background-color:rgb(240, 240, 240);
+    height: auto;
+
+    & h2{
+        font-weight: bold;
+        margin: 10px;
+    }
+}
+
+.restaurants-block{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.restaurants-type{
+    width: 90%;
+    padding: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+    }
+
+    & h3{
+        font-weight: bold;
+    }
+    
+    & p{
+        font-weight: lighter;
+    }
+}
+
+.restaurants-type-haut{
+    height: auto;
+    width: 100%;
+    position: relative;
+    
+    & img{
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    & .restaurants-new{
+        background-color: $color-tertiaire;
+        color: #1b6150;
+        padding: 5px;
+        border-radius: 5px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+.restaurants-type-description{
+    display: flex;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 5px 5px 10px lightgrey;
+    height: 60px;
+}
+
+.restaurants-type-text{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 85%;
+    font-size: small;
+}
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
 
@@ -130,40 +282,9 @@
 
 /* MEDIA Responsive - DESKTOP */
 
-@media only screen and (min-width: 1025px){
-    .localisation{
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        line-height: 40px;
-        background-color:rgb(204, 204, 204);
-        margin-top: 3px;
-    
-        & i{
-            margin:10px
-        }
-    
-        & p{
-            margin:10px
-        }
-    
-        input{
-            border: none;
-            background: transparent;
-            text-align: center;
-            font-weight: bold;
-        }
-    }
-    
+@media only screen and (min-width: 1025px){    
     .exploration{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
         line-height: 50px;
-        background-color:rgb(240, 240, 240);
     
         & h2{
             font-weight: bold;
@@ -172,174 +293,40 @@
     
         & p{
             margin: 10px;
-        }
-    }
-    
-    .exploration-button{
-        font-family: "Roboto";
-        line-height: 50px;
-        padding: 0px 10px;
-        border-radius: 50px;
-        color: white;
-        background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-        cursor: pointer;
-        box-shadow: 5px 5px 10px lightgrey;
-        margin: 15px;
-    
-        &:hover{
-            transition-duration: 0.25s;
-            box-shadow: 5px 5px 10px grey;
         }
     }
     
     .fonctionnement{
-        width: 100%;
-        height: auto;
         margin-top: 20px;
         margin-bottom: 20px;
-    
-        & h2{
-            font-weight: bold;
-            margin: 10px;
-        }
     }
     
     .fonctionnement-block{
-        display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        margin-left: 10px;
-        counter-reset: compteListe;
     }
     
     .fonctionnement-type{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
         width: 30%;
         line-height: 50px;
-        margin: 10px;
-        margin-left: 20px;
-        box-shadow: 5px 5px 10px lightgrey;
-        border-radius: 20px;
-    
-        &::before{
-            counter-increment: compteListe 1;
-            content: counter(compteListe) " ";
-            background: #9356DC;
-            height: 20px;
-            width: 20px;
-            border-radius: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            position: absolute;
-            font-family: "Roboto";
-            margin: -10px;
-        }
-    
-        &:hover{
-            background-color:rgb(240, 240, 240);
-            cursor: pointer;
-        }
-    
-        & i{
-            width: 15%;
-            min-width: 70px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: grey;
-        }
-    
-        &:hover i{
-            color: $color-primaire;
-            opacity: 100%;
-        }
-    
-        & p{
-            font-weight: bold;
-            width: 85%;
-        }
     }
     
     .restaurants{
-        display: flex;
-        flex-direction: column;
         margin-bottom: 20px;
-        background-color:rgb(240, 240, 240);
-    
-        & h2{
-            font-weight: bold;
-            margin: 10px;
-        }
     }
     
     .restaurants-block{
-        display: flex;
         flex-direction: row;
-        align-items: center;
-        flex-wrap: wrap;
     }
     
     .restaurants-type{
         width: 50%;
-        padding: 10px;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    
-        &:hover{
-            cursor: pointer;
-            transform: scale(1.02);
-        }
-    
-        & h3{
-            font-weight: bold;
-        }
-        
-        & p{
-            font-weight: lighter;
-        }
     }
     
     .restaurants-type-haut{
         height: 300px;
-        width: 100%;
-        position: relative;
         
         & img{
             height: 300px;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 20px 20px 0px 0px;
         }
-    
-        & .restaurants-new{
-            background-color: $color-tertiaire;
-            color: #1b6150;
-            padding: 5px;
-            border-radius: 5px;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-    }
-    
-    .restaurants-type-description{
-        display: flex;
-        border-radius: 0px 0px 20px 20px;
-        box-shadow: 5px 5px 10px lightgrey;
-        height: 60px;
-    }
-    
-    .restaurants-type-text{
-        padding-left: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        width: 85%;
-        font-size: small;
     }
 }
